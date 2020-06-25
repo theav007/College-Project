@@ -1,0 +1,294 @@
+    <!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Text Extraction</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+<script src="{{url_for('static', filename='css/nav.js')}}"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body align="center" onload="myFunction()" style="margin:0;" id="page">
+
+<div class="container-fluid index-page" id="myDiv">
+        <section class="header-area" id="myHeader">
+                <div class="navbar-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <nav class="navbar navbar-expand-lg">
+
+
+
+                                    <div class="col-md-4" align="left" id="logo">
+                                    <a class="navbar-brand" href="/" target="_blank">
+                                            <img src="{{ url_for('static', filename='image/av.svg') }}" height=50 width=50>
+                                    </a>
+                                    </div>
+        
+                                    <div class="col-md-8" id="right">
+                                        <ul class="navbar-nav ml-auto">
+                                              <li class="nav-item">
+                                                 <a href="https://github.com/theav007" target="_blank"> Github </a>
+                                            </li>
+                                            <li class="nav-item active">
+                                                <a href="https://www.linkedin.com/in/av333/" target="_blank"> Linkedin </a>
+                                             </li>
+                                          
+                                            <li class="nav-item">
+                                                <a href="https://mail.google.com/mail/" target="_blank"> Akash Vishwakarma </a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+
+                                </nav> <!-- navbar -->
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                </div> <!-- navbar area -->
+                </section>
+<div id="topcontrol" ></div>
+            <section id="banner">
+
+                <img src="{{ url_for('static', filename='image/text_extration.jpeg') }}" class="img">
+            </section>
+    <section id="body1">        
+    <div class="container">  
+
+        <div class="row" id="home1">
+            <div class="col-md-12">
+                <h1>Problem Statement</h1>
+                <p>There is a News company named <b>Best Wishes Publication</b> that broadcast news which sent by his/her reporter or undercover source through MMS or Email in from of picture. So it hard to identify texts manually so that OCR tools help to identify text (not noisy) with more accuratly and fast.</p>
+
+                <h1> Identify the texts</h1>
+                <p>There are 2 steps<b> Upload Images </b><i> click on Predict </i> <b> Text </b>that it's display the text.
+                <br>    
+                
+                </p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="body2">
+<div class="container">           
+    <div class="row" id="home">
+
+    <div class="col-md-3">
+        <div class="col-sm-12" id="algo">
+        <div class="blue"></div>
+        <div >
+            <h4>Tesseract Tool</h4>
+            <h6> The Characteristics</h6>
+             <span>Extract text from images</span>
+        </div>
+        </div>
+    <div class="col-sm-12" id="detail">
+        <div>
+            <h4>OCR Tool</h4>
+        </div>
+        <div><br><h6>Developed By:</h6><p>Google</p></div>
+        <div><br><h6>Deal With:</h6><p>Simple Images</p></div>
+        <div><br><h6>Main Function:</h6><p>Text Extract</p></div>
+        <div><br><h6>Target Variables:</h6><p>Images,Pdf</p></div>
+    </div>
+    </div>
+
+    <div class="col-md-6" id="new">
+        <div class="blue">
+        <h4 align="center">Best Wishes Publication</h4>
+        </div>
+        <form action="{{ url_for('text_image')}}" method="post" id="upload-form"
+        enctype="multipart/form-data">
+
+        <input type="file" name="image" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">
+        Predict</button>
+
+        
+        <br>{{prediction_image}}
+        </form>
+    
+
+
+
+
+
+        
+    </div>
+        <div class="col-md-3">
+        <div class="col-sm-12" id="algo">
+        <div class="blue"></div>
+        <div >
+            <h4>Download Classifier</h4>
+            <h6> GitHub Repository </h6>
+            <a href="https://github.com/theav007/Ml-Deployment-With-Flask/blob/master/Projects/Tesseract/app.py" target="_blank"><button>Get</button></a>
+            <br><br>
+            <h4>Download Dataset</h4>
+            <h6> GitHub Repository </h6>
+            <a href="https://github.com/theav007/Ml-Deployment-With-Flask/blob/master/Projects/Tesseract/app.py" target="_blank"><button>Get</button></a>
+            
+        </div>
+        </div>
+    <div class="col-sm-12" id="detail">
+        <div>
+            <h4>Visit Other Projects</h4><br>
+            <div class="row" id="blog">
+                <div class="col-sm-4">
+                    <img src="{{ url_for('static', filename='image/loan-approval.jpg') }}" id='blog-img'>
+                </div>
+                <div class="col-sm-8">
+                    <h5>Loan Eligibilty Prediction</h5>
+                    <a href="loan" target="_blank"><button>Visits</button></a>
+                </div>
+            </div><br>
+            <div class="row" id="blog">
+                <div class="col-sm-4">
+                    <img src="{{ url_for('static', filename='image/hr.jpg') }}" id='blog-img'>
+                </div>
+                <div class="col-sm-8">
+                    <h5>HR Analysis</h5>
+                    <a href="hr" target="_blank"><button>Visits</button></a>
+                </div>
+            </div><br>
+            <div class="row" id="blog">
+                <div class="col-sm-4">
+                    <img src="{{ url_for('static', filename='image/text.png') }}" id='blog-img'>
+                </div>
+                <div class="col-sm-8">
+                    <h5>Text Classification</h5>
+                    <a href="text" target="_blank"><button>Visits</button></a>
+                </div>
+            </div>
+
+        </div></div>
+    </div>
+
+
+    </div>
+    </div>
+
+    </section>
+<footer id="footer" class="footer-area" style="background-image: url('{{ url_for('static', filename='image/footer.png') }}');">
+        
+        <div class="footer-widget">
+            <div class="container" id="footer1">
+                <div class="row" id="foo1">
+                    <div class="col-sm-6">
+                        <div class="footer-link">
+                            <h6 class="footer-title">A Major Project</h6>
+                            <p>I <b>Akash Vishwakarma</b>, student of <b>Master of Computer Application, Bhabha Engineering Research Institute, Bhopal (M.P.)</b> hereby declare that the work presented in this Major Project is outcome of my own work, is bonafide, correct to the best of my knowledge and this work has been carried out taking care of Engineering Ethics. The work presented does not infringe any patented work and has not been submitted to any University for the award of any degree or any professional diploma.
+                            </p>
+                        </div> <!-- footer link -->
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="footer-link">
+                            <h6 class="footer-title">I Am Grateful To:</h6>
+
+                                <i class="fa fa-arrow-circle-right" aria-hidden="true"> Principal Prof. Deepa Bakhshi</i>
+                                <i class="fa fa-arrow-circle-right" aria-hidden="true"> HOD Prof. Arvind Singh</i><br>
+                                <i class="fa fa-arrow-circle-right" aria-hidden="true"> Prof. Shyamsunder Patidar</i><br>
+                                
+                              
+                               
+                     
+                        </div> <!-- footer link -->
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="footer-link">
+                            <h6 class="footer-title">Submitted By:</h6>
+                                 <i class="fa fa-arrow-circle-right" aria-hidden="true"> Akash Vishwakarma</i><br>
+                                <i class="fa fa-arrow-circle-right" aria-hidden="true"> 09CA183MC002</i><br>
+                                <i class="fa fa-arrow-circle-right" aria-hidden="true"> MCA Final Year Jun 2020</i>
+                             
+                            
+                        </div> <!-- footer link -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer widget -->
+        
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <div class="copyright text-center text-lg-left mt-10">
+                            <p class="text">Crafted by <a style="color: #38f9d7" rel="nofollow" href="#">AV</a></p>
+                        </div> <!--  copyright -->
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="footer-logo text-center mt-10">
+                            <a href="index.html">
+                                <img src="{{ url_for('static', filename='image/av1.png') }}" height=80 width=100>
+                            </a>
+                        </div> <!-- footer logo -->
+                    </div>
+                    <div class="col-lg-5" align="right" id="social">
+                       
+                            <a href="https://www.facebook.com/akashjivishwakarma" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="https://www.instagram.com/theaky786/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/in/av333/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="https://github.com/theav007" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            <a href="theaky786@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                        
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer copyright -->
+    </footer>
+</div>
+
+<script type="text/javascript">
+    //Scroll-up
+  jQuery(document).ready(function($){
+    $(window).scroll(function(){
+        if ($(this).scrollTop() < 200) {
+            $('#topcontrol') .fadeOut();
+        } else {
+            $('#topcontrol') .fadeIn();
+        }
+    });
+    $('#topcontrol').on('click', function(){
+        $('html, body').animate({scrollTop:0}, 'slow');
+        return false;
+        });
+});
+
+jQuery(document).ready(function () {
+    jQuery(window).scroll(function () {
+        if (jQuery(this).scrollTop() > 120) {
+            jQuery('.header-area').addClass("fixed animated fadeInDown");
+
+        } else {
+            jQuery('.header-area').removeClass("fixed animated fadeInDown");
+        }
+
+    });
+
+});
+
+</script>
+
+
+</div>
+<div id="divloader" align="center" class="center">
+  <div class="ring" id="loader"></div>
+  <span>Loading...</span>
+</div>
+
+
+
+</body>
+</html>

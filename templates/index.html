@@ -1,0 +1,594 @@
+    <!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Precise</title>
+  <link rel="icon" href="{{ url_for('static', filename='image/av.svg') }}" sizes="16x16">
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+<script src="{{url_for('static', filename='css/nav.js')}}"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+
+
+</head>
+
+<body align="center" onload="myFunction()" style="margin:0;" >
+
+
+<div class="container-fluid" id="myDiv">
+        <section class="header-area" id="myHeader">
+                <div class="navbar-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <nav class="navbar navbar-expand-lg">
+                                    <div class="col-md-5" id="left">
+                                        <ul class="navbar-nav ml-auto">
+                                            <li class="nav-item active">
+                                                <a href="#About"> About me </a>
+                                             </li>
+                                            <li class="nav-item">
+                                                 <a href="#Projects"> Projects </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="https://github.com/theav007" target="_blank"> Github </a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+
+
+
+                                    <div class="col-md-2" align="center" id="logo">
+                                    <a class="navbar-brand" href="/">
+                                            <img src="{{ url_for('static', filename='image/av.svg') }}" height=50 width=50>
+                                    </a>
+                                    </div>
+        
+                                    <div class="col-md-5" id="right">
+                                        <ul class="navbar-nav ml-auto">
+                                            <li class="nav-item active">
+                                                <a href="https://www.linkedin.com/in/av333/" target="_blank"> Linkedin </a>
+                                             </li>
+                                            <li class="nav-item">
+                                                 <a href="#Thanks"> Thanks </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#Contact"> Contact </a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+
+                                </nav> <!-- navbar -->
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                </div> <!-- navbar area -->
+                </section>
+
+
+        <!-- Banner -->
+            <section id="banner" >
+                <img src="{{ url_for('static', filename='image/slider4.gif') }}" class="mySlides">
+                <img src="{{ url_for('static', filename='image/slider1.gif') }}" class="mySlides ">
+                
+                
+                
+
+                  <!-- Next and previous buttons -->
+                
+                
+                <div class="content">
+                <p>Welcome To Precise.</p>
+                <h1>the quality of being correct.</h1>
+                <span>Number of correct predictions vs Total number of predictions.</span>
+                <ul class="actions">
+                    <li><a href="#Projects" class="button alt">FIND OUT ABOUT OUR MODEL</a></li>
+                </ul>
+                
+                </div>
+                
+
+            </section>
+
+            <div id="topcontrol" ></div>
+
+    <section id="Introduction">        
+    <div class="container">  
+
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Introduction</h1>
+                <p>This Project deal with some real life problems and outcome with good accuracy. This problem solved using <b>Machine Learning Python.</b><br>
+                    For Learning model I firsly load the datasets (i.e. CSV ) and appling preprocessing methods which invoved in few steps:<br>
+                    <i>(i) Finding Null value.</i><br> 
+                    <i>(ii) Replace null values with mode,medium,mean as per model requirements</i> <br>Then divide the datasets for training and testing purpose (eg.80% for <i>training</i> and 20% for <i>testing</i>).Then apply the appropriate <i>algorithmns</i> and <i>predict</i> the results.<br>After model is ready its time to <i>deployment</i> so I use <b>Flask</b> because its very lite weighted and directly interact with <b>Machine Learning</b> libraries and <b>HTML and CSS/JS.</b></p>
+                <h1>Why do we use it?</h1>
+                <p>This project lots of potential to deal with real life problem and outcome cames quick and fast. There are some examples of <b>Machine Learning</b> projects which change the world: <br>
+                    <i>(i) Sentiment Analyzer of Social Media</i><br>
+                    <i>(ii) A Recommended Systems</i><br>
+                    <i>(iii) Human Activity Recognition System</i><br>
+                    <i>(iv) Emotion Detection System</i><br>
+                    <i>(v) Breast Cancer Detection System</i>and <i>so on.</i><br>
+                    </p>
+                <h1>Affecting Factors of Machine Learning?</h1>
+                <p>There are few factor which affect the accuracy of <b>Machine Leartning:</b>
+                    <br>
+                    <i>(i) Train low amount of data</i><br>
+                    <i>(ii) Quality of data:Null values,Outliers(eg.age of a person 169 years old)</i><br>
+                    <i>(iii) Selection of features in the data:Selection of independent indexs</i><br>
+                    <i>(iv) Model Selection</i><br>
+                    </p>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="Projects">
+    <div class="container">
+        <h1 align="center"><img src="{{ url_for('static', filename='image/clock2.gif') }}" id="clock">Time Duration</h1>
+        <div class="row" id="counter">
+
+            <div class="col-md-2" style="background-image: url('{{ url_for('static', filename='image/start.gif') }}');    background-size: cover;">
+            <h6>Statting Date</h6>
+            <span>13 April 2020</span>
+            
+            </div>
+        <div class="col-md-2" style="background-image: url('{{ url_for('static', filename='image/ml.gif') }}');    background-size: cover;">
+            <h6>Model Development</h6>
+            <span>8 <i>Days</i></span>
+            
+        </div>
+        <div class="col-md-2" style="background-image: url('{{ url_for('static', filename='image/flaskff.jpg') }}');    background-size: cover;">
+            <h6>Flask</h6>
+            <span>3 <i>Days</i></span>
+            
+        </div>
+        <div class="col-md-2" style="background-image: url('{{ url_for('static', filename='image/designing.gif') }}');    background-size: cover;    background-position: top;">
+            <h6>Designing</h6>
+            <span>15 <i>Days</i></span>
+            
+        </div>
+        <div class="col-md-2" style="background-image: url('{{ url_for('static', filename='image/web-design.gif') }}');    background-size: cover;">
+            <h6>Testing</h6>
+            <span>1 <i>Days</i></span>
+            
+        </div>
+
+    </div>
+    <h1 align="center">Our Product's</h1>
+    <div class="row" id="home2">
+        <div class="col-sm-6" id="image">
+                 <img src="{{ url_for('static', filename='image/loan-approval.jpg') }}" class="img">
+        </div>
+        <div class="col-sm-6" id="text1">
+                 <h3>Loan Approval Prediction</h3>
+                 <h4>Best Wishes Finance</h4>
+                <p>That deals in all loans. They have presence across all <i>urban, semi urban and rural</i> areas. Customer first apply for the loan after that company validates the customer eligibility for loan. However doing this manually takes a lot of time. Hence it wants to automate the loan eligibility process (real time) based on customer information.</p>
+        
+                                <ul class="actions">
+                            <li><a href="loan" class="button alt" target="_blank">Read More</a></li>
+                        </ul>
+                        </div>
+    </div>
+
+        <div class="row" id="home2">
+
+        <div class="col-sm-6" id="text1">
+                 <h3>Text Classification</h3>
+                 <h4>Best Wishes Publication</h4>
+                <p>There is a News company named Best Wishes that broadcast news which sent by his/her reporter or undercover source through SMS or Email. So it hard to identify manually the class of news because its huge in numbers so that machine learning help to identify classes with more accuratly and fast.The goal of text classification is to automatically classify the text documents into one or more defined categories.</p>
+
+                                <ul class="actions">
+                            <li><a href="text" class="button alt" target="_blank">Read More</a></li>
+                        </ul>
+        </div>
+                <div class="col-sm-6" id="image">
+        <img src="{{ url_for('static', filename='image/text.png') }}" class="img">
+        </div>
+    </div>
+    <div class="row" id="home2">
+                <div class="col-sm-6" id="image">
+        <img src="{{ url_for('static', filename='image/hr.jpg') }}" class="img" >
+        </div>
+       <div class="col-sm-6" id="text2">
+                 <h3>HR Analysis</h3>
+                 <h4>Best Wishes Finance</h4>
+                <p>They have to promot there 100 employee's,so the HR decide who is right candidate to be promoted there are more then 50k employees in the company so it will take lot time to decide right candidate manually so Machine Learning Team develop a model which is more accurate and fast to decide right candidate with some information.</p>
+
+                                <ul class="actions">
+                            <li><a href="hr" class="button alt" target="_blank">Read More</a></li>
+                        </ul>
+        </div>
+
+        
+        <div class="row" id="home2">
+
+        <div class="col-sm-6" id="text1">
+                 <h3>Text Extraction From Images</h3>
+                 <h4>Best Wishes Publication</h4>
+                <p>Python-tesseract is an optical character recognition (OCR) tool for python. That is, it will recognize and “read” the text embedded in images.So the publication companies use this tool to extract text from images.Tesseract, a highly popular OCR engine, was originally developed by Hewlett Packard in the 1980s and was then open-sourced in 2005. Google adopted the project in 2006 and has been sponsoring it ever since.</p>
+
+                                <ul class="actions">
+                            <li><a href="tesseract" class="button alt" target="_blank">Read More</a></li>
+                        </ul>
+        </div>
+                <div class="col-sm-6" id="image">
+        <img src="{{ url_for('static', filename='image/tesseract.png') }}" class="img">
+        </div>
+    </div>
+
+
+        
+    </div>
+
+
+
+    </div>
+  
+    </section>
+    <section id="Contact" style="background-image: url('{{ url_for('static', filename='image/Ir4.gif') }}');">        
+    <div class="container"> 
+    <h3 align="center">Contact</h3> 
+    <h1 align="center">Get In Touch.</h1> 
+    <span id="contacttext"><b>H</b>ello,<br>Thanks for your recent visit to our website. We want to provide the best experience possible! To help us, please take a moment to leave your feedback and suggestion.On a scale of 1 - 5, how likely are you to like my project.<br>Thank you.</span>
+    
+    <div class="row" id="home1">
+            <div class="col-md-6" id="contact-left">
+                <img src="{{ url_for('static', filename='image/contact.gif') }}" >
+            </div>
+            <div class="col-md-6" id="contact-right">
+            <form action="{{ url_for('sent_mail')}}" method="post">
+               
+                        <h3>Send Me A Message</h3>
+                        
+                        <input type="text" name="name" placeholder="Name" required="required" id="name" /><br>
+                        
+                        <input type="text" name="email" placeholder="Email" required="required" id="email" /><br>
+                        
+                        <input type="text" name="subject" placeholder="Subject" required="required" id="subject" /><br>
+                        
+                        
+                        <textarea name="feedback" placeholder="Feedback" required="required" id="feedback" ></textarea><br>
+                        
+                        <span class="s1" >🤮</span><input  class="ss1" id="star" type="radio" name="star" value=1 />
+
+                        
+                        <span class="s2">🙁</span><input class="ss2" id="star" type="radio" name="star" value=2 />
+                        
+                        <span class="s3">😐</span><input class="ss3" id="star" type="radio" name="star" value=3 />
+                        
+                        <span class="s4">🙂</span><input  class="ss4" id="star" type="radio" name="star" value=4 />
+                        
+                        <span class="s5">😍</span><input  class="ss4" id="star" type="radio" name="star" value=5 />
+                        
+                        
+                        <button type="submit" class="btn btn-primary btn-block btn-large">
+                        Send</button>
+                    
+            </form>
+            <br/>
+            <div id="successAlert" class="alert alert-success" role="alert" style="display:none;"></div>
+            <div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
+            <h4 id='loading' style="display:none;"><img src="{{ url_for('static', filename='image/mailing.gif') }}" ></h4>
+
+
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<section id="Thanks" style="background-image: url('{{ url_for('static', filename='image/thanks.jpg') }}');        background-size: cover;background-position: top;">        
+    <div class="container"> 
+    <h1 align="center">Thanks</h1> 
+    <span id="contacttext">Thanks and oceans of gratitude to all of you for your expertly professional and caring communication. I am learn from your works and so very happy to share it with you.</span>
+    <div class="row" id="home1">
+            <div class="col-md-6" id="contact-left">
+                <img src="{{ url_for('static', filename='image/thankyou.gif') }}" >
+            </div>
+        </div>
+        <div class="row" id="thanks-tab">
+            <div class="col-md-12" id="tabs">
+            
+                    <div class="w3-bar w3-black">
+                    <button class="w3-bar-item w3-button tablink w3-red" onclick="openCity(event,'design')">Designing</button>
+                    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'pic')">Images & Fonts</button>
+                    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'data')">Data-Sets</button>
+                    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'ml')">Machine Learning</button>
+                    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'others')">Other's</button>
+                  </div>
+                  <br>
+
+                  <div id="design" class="w3-container city w3-animate-zoom" style="display:block">
+                    <h2>Designer</h2>
+                    <p>A designer is a person who makes designs for objects.</p>
+                    <p>Thank you for being an important part of my story.</p>
+                    <ul>
+                        <li><a href="https://www.w3schools.com/" target="_blank">W3 School</a></li>
+                        <li><a href="https://stackoverflow.com//" target="_blank">Stackoverflow</a></li>
+                        <li><a href="http://www.septellar.com/" target="_blank">Lukasz Malucha</a></li>
+                        <li><a href="https://www.styleshout.com" target="_blank">Styleshout</a></li>
+
+                    </ul>
+                  </div>
+                <div id="pic" class="w3-container city w3-animate-zoom" style="display:none">
+                    <h2>Images & Fonts</h2>
+                    <p>Images is representation of thought in a frame.</p>
+                    <p>Thank you for being an important part of my story.</p>
+                    <ul>
+                        <li><a href="https://www.google.com/imghp" target="_blank">Google Images</a></li>
+                        <li><a href="http://proofdrinks.com/" target="_blank">Proof Drinks</a></li>
+                        <li><a href="http://getwallpapers.com/collection/calvin-and-hobbes-wallpaper" target="_blank">Calvin And Hobbes Wallpaper</a></li>
+                        <li><a href="https://www.dafont.com/cocogoose-letterpress.font" target="_blank">Fonts-Cocogoose Letterpress</a></li>
+
+                    </ul>
+                  </div>
+                  <div id="data" class="w3-container city w3-animate-zoom" style="display:none">
+                    <h2>Data Sets</h2>
+                    <p>Data Sets is representation of every data in rows and columns</p>
+                    <p>Thank you for being an important part of my story.</p>
+                    <ul>
+                        <li><a href="https://www.kaggle.com/" target="_blank">Kaggle</a></li>
+                        <li><a href="https://www.analyticsvidhya.com/" target="_blank">Analytics Vidhya</a></li>
+                        <li><a href="#">Keras Preloaded Datasets</a></li>
+                        <li><a href="https://data-flair.training/blogs/machine-learning-datasets/" target="_blank">Data Flair</a></li>
+
+
+                    </ul>
+                  </div>
+                  <div id="ml" class="w3-container city w3-animate-zoom" style="display:none">
+                    <h2>Machine Learning</h2>
+                    <p>Machine learning gives the computer ability to learn without being programmed explicitly and deal with datas feeds by user or customer.</p>
+                    <p>Thank you for being an important part of my story.</p>
+                    <ul>
+                        
+                        <li><a href="https://www.analyticsvidhya.com/" target="_blank">Analytics Vidhya</a></li>
+                        <li><a href="https://github.com/LukaszMalucha" target="_blank">Lukasz Malucha</a></li>
+                        <li><a href="https://github.com/krishnaik06" target="_blank">Krish C Naik</a></li>
+                        <li><a href="https://github.com/nitinkaushik01" target="_blank">Nitin Kaushik</a></li>
+
+                    </ul>
+
+                  </div>
+                    <div id="others" class="w3-container city w3-animate-zoom" style="display:none">
+                    <h2>Random's Search</h2>
+                    <p>Some best platform for searching...</p>
+                                        <ul>
+                        
+                        <li><a href="https://www.google.co.in/" target="_blank">Google</a></li>
+                        <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+                        <li><a href="https://in.pinterest.com/" target="_blank">Pinterest</a></li>
+
+                    </ul>
+                  </div>
+
+                </div>
+             </div>  
+
+            
+
+
+        </div>
+    
+</section>
+
+<section id="About" style="background-image: url('{{ url_for('static', filename='image/about4.jpg') }}');        background-size: cover;background-position: top;">        
+
+    <div class="container">  
+
+        <div class="row" id="home1">
+            <div class="col-md-12">
+                <h1>Akash Vishwakarma</h1>
+                <h3><b>MCA,6th Semester,Bhabha Colleage Of Engineering,Bhopal(M.P)</b></h3>
+                <p>I am 26 years old,I am From <b>Satna (M.P.)</b>,I done <i>B.Sc(H)</i> from <b>Delhi University</b> and currently I pursuing <i>MCA.</i> I am certified in <b>Machine Learning ,Data Science and PHP</b>,I passionate to discover hidden features through unstructured datasets and appling <b>Algorithms</b> which came with desired output.And also I love to design frontend using <b>HTMl,CSS and Java Script.</b>I am good learner and listener</p>
+                <h3><b>Experience?</b></h3>
+                <p>I have experience in <b>Php Developer</b> (6 Months: Trainee + 7 Months:Developer)</p>
+                <h3><b>Project</b></h3>
+                <p><b>B.Sc:</b> <i>Veterinary Animal Registration and Medication Data Management System.</i></p>
+                <p><b>Php Trainee:</b><br> 
+                                <i>(i) Student Management System.<br>
+                                (ii) Events Ticketing System.</i></p>
+                <p><b>Machine Learning & Data Science:</b><br> 
+                                <i>(i) Daily Expensive Details (Core Python).<br>
+                                    (ii) Loan Eligibility Prediction.<br>
+                                    (iii) Customer Segmentation.<br>
+                                    (iv) Sentiment Analysis.<br>
+                                    (v) HR Analysis.</i><br></p>
+                <p><b>MCA,Minor Project:</b> <i>Text Mining.</i></p>
+                <p><b>MCA,Major Project:</b><i> Precise (Collection Of Some Machine Learning Use Cases).</i></p>
+                <h3><b>Certification</b></h3>
+                <p><b>(i) Machine Learning & Data Science (Ducat, Gurugram (H.R.)).</b></p>
+                <p><b>(ii) Php & Wordpress (Universal Informatic, Indore (M.P.)).</b></p>
+                
+
+                <h3><b>Online Certification</b></h3>
+                <p><b>(i) Python-3 Tutorial Course (SOLO LEARN).</b></p>
+                <p><b>(ii) Php Tutorial Course (SOLO LEARN).</b></p>
+                <p><b>(iii) HTML Fundamentals Course (SOLO LEARN).</b></p>
+                <p><b>(iv) Career Edge - Knockdown the Lockdown (TCS iON).</b></p>
+                <p><b>(v) The Fundamentals of Digital Marketing (Google Digital Garage).</b></p>
+                <p><b>(vi) Data Science, Image Processing & Deep Learning Applications (University Institute of Technology,Barkatullah University, Bhopal).</b></p><br>
+
+                <span id="cv"><a href="static/av.docx" download  ><i class="fa fa-file" aria-hidden="true"> Download My CV</i></a></span>
+
+            </div>
+        </div>
+    </div>
+</section>
+<footer id="footer" class="footer-area" style="background-image: url('{{ url_for('static', filename='image/footer.png') }}');">
+        
+        <div class="footer-widget">
+            <div class="container" id="footer1">
+                <div class="row" id="foo1">
+                    <div class="col-sm-6">
+                        <div class="footer-link">
+                            <h6 class="footer-title">A Major Project</h6>
+                            <p>I <b>Akash Vishwakarma</b>, student of <b>Master of Computer Application, Bhabha Engineering Research Institute, Bhopal (M.P.)</b> hereby declare that the work presented in this Major Project is outcome of my own work, is bonafide, correct to the best of my knowledge and this work has been carried out taking care of Engineering Ethics. The work presented does not infringe any patented work and has not been submitted to any University for the award of any degree or any professional diploma.
+                            </p>
+                        </div> <!-- footer link -->
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="footer-link">
+                            <h6 class="footer-title">I Am Grateful To:</h6>
+
+                                <i class="fa fa-arrow-circle-right" aria-hidden="true"> Principal Prof. Deepa Bakhshi</i>
+                                <i class="fa fa-arrow-circle-right" aria-hidden="true"> HOD Prof. Arvind Singh</i><br>
+                                <i class="fa fa-arrow-circle-right" aria-hidden="true"> Prof. Shyamsunder Patidar</i><br>
+                                
+                              
+                               
+                     
+                        </div> <!-- footer link -->
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="footer-link">
+                            <h6 class="footer-title">Submitted By:</h6>
+                                 <i class="fa fa-arrow-circle-right" aria-hidden="true"> Akash Vishwakarma</i><br>
+                                <i class="fa fa-arrow-circle-right" aria-hidden="true"> 09CA183MC002</i><br>
+                                <i class="fa fa-arrow-circle-right" aria-hidden="true"> MCA Final Year Jun 2020</i>
+                             
+                            
+                        </div> <!-- footer link -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer widget -->
+        
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <div class="copyright text-center text-lg-left mt-10">
+                            <p class="text">Crafted by <a style="color: #38f9d7" rel="nofollow" href="#">AV</a></p>
+                        </div> <!--  copyright -->
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="footer-logo text-center mt-10">
+                            <a href="index.html">
+                                <img src="{{ url_for('static', filename='image/av1.png') }}" height=80 width=100>
+                            </a>
+                        </div> <!-- footer logo -->
+                    </div>
+                    <div class="col-lg-5" align="right" id="social">
+                       
+                            <a href="https://www.facebook.com/akashjivishwakarma" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="https://www.instagram.com/theaky786/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/in/av333/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="https://github.com/theav007" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            <a href="theaky786@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                        
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer copyright -->
+    </footer>
+</div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 10000); // Change image every 10 seconds
+}
+</script>
+<script type="text/javascript">
+    //Scroll-up
+  jQuery(document).ready(function($){
+    $(window).scroll(function(){
+        if ($(this).scrollTop() < 200) {
+            $('#topcontrol') .fadeOut();
+        } else {
+            $('#topcontrol') .fadeIn();
+        }
+    });
+    $('#topcontrol').on('click', function(){
+        $('html, body').animate({scrollTop:0}, 'slow');
+        return false;
+        });
+});
+
+jQuery(document).ready(function () {
+    jQuery(window).scroll(function () {
+        if (jQuery(this).scrollTop() > 120) {
+            jQuery('.header-area').addClass("fixed animated fadeInDown");
+
+        } else {
+            jQuery('.header-area').removeClass("fixed animated fadeInDown");
+        }
+
+    });
+
+});
+
+</script>
+
+
+<script>
+$(document).ready(function() {
+    $('form').on('submit', function(event) {
+        $('#loading').show();
+        $.ajax({
+            data : {
+                n : $('#name').val(),
+                e : $('#email').val(),
+                s : $('#subject').val(),
+                f : $('#feedback').val(),
+                r : $("input[name='star']:checked").val()
+                
+            },
+            type : 'POST',
+            url : '/sent_mail'
+        })
+        .done(function(data) {
+            if (data.error) {
+                $('#errorAlert').text(data.error).show();
+                $('#successAlert').hide();
+                $('#loading').hide();
+            }
+            else {
+                $('#successAlert').text(data.result).show();
+                $('#errorAlert').hide();
+                $('#loading').hide();
+            }
+ 
+        });
+        event.preventDefault();
+    });
+});
+</script>
+
+</div>
+<div id="divloader" align="center" class="center">
+  <div class="ring" id="loader"></div>
+  <span>Loading...</span>
+</div>
+
+
+
+
+</body>
+</html>

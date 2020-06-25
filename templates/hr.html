@@ -1,0 +1,379 @@
+    <!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>HR Analysis</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+<script src="{{url_for('static', filename='css/nav.js')}}"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body align="center" onload="myFunction()" style="margin:0;" id="page">
+
+<div class="container-fluid index-page" id="myDiv">
+        <section class="header-area" id="myHeader">
+                <div class="navbar-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <nav class="navbar navbar-expand-lg">
+
+
+
+                                    <div class="col-md-4" align="left" id="logo">
+                                    <a class="navbar-brand" href="/" target="_blank">
+                                            <img src="{{ url_for('static', filename='image/av.svg') }}" height=50 width=50>
+                                    </a>
+                                    </div>
+        
+                                    <div class="col-md-8" id="right">
+                                        <ul class="navbar-nav ml-auto">
+                                              <li class="nav-item">
+                                                 <a href="https://github.com/theav007" target="_blank"> Github </a>
+                                            </li>
+                                            <li class="nav-item active">
+                                                <a href="https://www.linkedin.com/in/av333/" target="_blank"> Linkedin </a>
+                                             </li>
+                                          
+                                            <li class="nav-item">
+                                                <a href="https://mail.google.com/mail/" target="_blank"> Akash Vishwakarma </a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+
+                                </nav> <!-- navbar -->
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                </div> <!-- navbar area -->
+                </section>
+<div id="topcontrol" ></div>
+            <section id="banner">
+
+                <img src="{{ url_for('static', filename='image/HR-Analytics.png') }}" class="img">
+            </section>
+
+    <section id="body1">        
+    <div class="container">  
+
+        <div class="row" id="home1">
+            <div class="col-md-12">
+                <h1>Problem Statement</h1>
+                <p>There is a company named <b>Best Wishes Finance</b> that deals in all loans. They have to promot there 100 employee's,so the HR decide who is right candidate to be promoted there are more then 50k employees in the company so it will take lot time to decide right candidate manually so Machine Learning Team develop a model which is more accurate and fast to decide right candidate with some information.</p>
+
+                <h1> Identify the factors that are eligible for promotion.</h1>
+                <p>There are 11 columns in our data set. Of them <b>is_promoted</b> is the response variable and rest all are the variables /factors that decide the promotion of the employee or not.
+                <br>    
+                
+                <b>department :</b> Person should have only one Department.<br>
+                <br><i>Sales & Marketing</i>
+                <br><i>Operations</i>
+                <br><i>Technology</i>
+                <br><i>Analytics</i>
+                <br><i>R&D</i>
+                <br><i>Procurement</i>
+                <br><i>Finance</i>
+                <br><i>HR</i>
+                <br><i>Legal</i>
+                <br>
+
+                <b>education :</b> Education Level's.<br>
+                <br><i>Master's & above</i>
+                <br><i>Bachelor's</i>
+                <br><i>Below Secondary</i>
+                <br>
+                <b>gender :</b> Male or Female.<br>
+                <b>no_of_trainings:</b> Number of other trainings completed in previous year on soft skills, technical skills etc. <i>0</i> to <i>10</i><br>
+
+                <b>age :</b> Employee Age.<br>
+                <b>previous_year_rating :</b> Employee Rating for the previous year.<i>1</i> to <i>5</i><br>
+                <b>length_of_service :</b> Length of service in years.<br>
+                <b>KPIs_met >80% :</b>  If Percent of <b>KPIs(Key performance Indicators)</b> >80% then 1 else 0<br>
+                <b>awards_won? :</b> If awards won during previous year then 1 else 0<br>
+                <b>avg_training_score :</b> Average score in current training evaluations<i>40</i> to <i>99</i><br>
+                
+                <b>is_promoted :</b> If the employee is eligible for promotion it’s yes represented by Y else it’s no represented by N.<br>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="body2">
+<div class="container">           
+    <div class="row" id="home">
+
+    <div class="col-md-3 col">
+        <div class="col-sm-12" id="algo">
+        
+        
+            <h4>Classification Algorithm</h4><br>
+            <h6> The Characteristics</h6>
+             <span>Classification algorithm used to assign observations to a discrete set of classes.</span>
+        
+        </div>
+    <div class="col-sm-12" id="detail">
+        
+            <br><h4>Random Forest Classifier</h4>
+        
+        <br><h6>Accuracy:</h6><p>98%</p>
+        <br><h6>Total Entries:</h6><p>54808</p>
+        <br><h6>Target Variable:</h6><p>is_promoted</p>
+        <br>    <h6>Predictor Variables:</h6><p>Remaining Columns</p>
+    
+    <br><br><br><br><br><br><br><br><br><br></div>
+        </div>
+    <div class="col-md-6 col" id="new">
+        <div class="blue">
+        <h4 align="center">Best Wishes Finance</h4>
+        </div>
+
+
+    <form action="{{ url_for('hr')}}" method="post">
+        
+    <table  align="left">
+    
+    <tr>
+    <td>Department:</td>
+    <td><select name="department">
+    <option value=0>Sales & Marketing</option>
+    <option value=1>Operations</option>
+    <option value=2>Technology</option>
+    <option value=3>Analytics</option>
+    <option value=4>R&D</option>
+    <option value=5>Procurement</option>
+    <option value=6>Finance</option>
+    <option value=7>HR</option>
+    <option value=8>Legal</option>
+    </select></td></tr>
+
+    <tr>
+    <td>Education:</td>
+    <td><select name="edu">
+    <option value=2>Master's & above</option>
+    <option value=0>Bachelor's</option>
+    <option value=1>Below Secondary</option>
+    </select></td></tr>
+    <tr>
+    <td>Gender:</td>
+    <td><select name="sex">
+    <option value=1>Male</option>
+    <option value=0>Female</option>
+    </select></td></tr>
+    
+    <tr><td>Number Of Training:</td>
+    <td>
+    <input type="text" name="training" placeholder="Number Of Training 1 t0 10" required="required" />
+    </td></tr>
+    <tr><td>Age:</td>
+    <td>
+    <input type="text" name="age" placeholder="Age In years" required="required" />
+    </td></tr>    
+    <tr><td>Previous Year Rating:</td>
+    <td>
+    <input type="text" name="rating" placeholder="Previous Year Rating 1 t0 5" required="required" />
+    </td></tr>
+    <tr><td>Years Of Service:</td>
+    <td>
+    <input type="text" name="service" placeholder="Years of Services" required="required" />
+    </td></tr>
+
+    
+    <tr>
+    <td>KPI more then 80%:</td>
+    <td><select name="kpi">
+    <option value=0>No</option>
+    <option value=1>Yes</option>
+    </select></td></tr>  
+    <tr>
+    <td>Awards Won:</td>
+    <td><select name="award">
+    <option value=0>No</option>
+    <option value=1>Yes</option>
+    </select></td></tr> 
+    <tr><td>Average Training Scores:</td>
+    <td>
+    <input type="text" name="train_score" placeholder="Average Training Scores 40 to 100" required="required" />
+    </td></tr>
+
+    
+    <tr>
+    <td colspan="2"><button type="submit" class="btn btn-primary btn-block btn-large">
+    Predict</button>
+    </td></tr>      
+    </table>
+    <br><h2>{{ prediction_text }}</h2>
+    </form>
+    </div>
+    <div class="col-md-3 col">
+        <div class="col-sm-12" id="algo">
+        
+        
+            <h4>Download Classifier</h4>
+            <h6> GitHub Repository </h6>
+            <a href="https://github.com/theav007/ML-Projects/blob/master/Loan%20Prediction%20With%20Multiple%20Algo's.ipynb" target="_blank"><button>Get</button></a>
+            <br><br><br>
+            <h4>Download Dataset</h4>
+            <h6> GitHub Repository </h6>
+            <a href="https://github.com/theav007/ML-Projects/blob/master/loantrain.csv" target="_blank"><button>Get</button></a>
+            
+      
+        </div>
+    <div class="col-sm-12" id="detail">
+        
+            <br><h4>Visit Other Projects</h4><br>
+            <div class="row" id="blog">
+                <div class="col-sm-4">
+                    <img src="{{ url_for('static', filename='image/text.png') }}" id='blog-img'>
+                </div>
+                <div class="col-sm-8">
+                    <h5>Text Classification</h5>
+                    <a href="text" target="_blank"><button>Visits</button></a>
+                </div>
+            </div><br><br>
+            <div class="row" id="blog">
+                <div class="col-sm-4">
+                    <img src="{{ url_for('static', filename='image/loan-approval.jpg') }}" id='blog-img'>
+                </div>
+                <div class="col-sm-8">
+                    <h5>Loan Eligibilty Prediction</h5>
+                    <a href="loan" target="_blank"><button>Visits</button></a>
+                </div>
+            </div><br><br>
+            <div class="row" id="blog">
+                <div class="col-sm-4">
+                    <img src="{{ url_for('static', filename='image/tesseract.png') }}" id='blog-img'>
+                </div>
+                <div class="col-sm-8">
+                    <h5>Text Extraction</h5>
+                    <a href="tesseract" target="_blank"><button>Visits</button></a>
+                </div>
+            </div><br><br><br><br><br><br><br><br><br><br>
+
+        </div>
+    </div>
+
+
+    </div>
+</div>
+    </section>
+<footer id="footer" class="footer-area" style="background-image: url('{{ url_for('static', filename='image/footer.png') }}');">
+        
+        <div class="footer-widget">
+            <div class="container" id="footer1">
+                <div class="row" id="foo1">
+                    <div class="col-sm-6">
+                        <div class="footer-link">
+                            <h6 class="footer-title">A Major Project</h6>
+                            <p>I <b>Akash Vishwakarma</b>, student of <b>Master of Computer Application, Bhabha Engineering Research Institute, Bhopal (M.P.)</b> hereby declare that the work presented in this Major Project is outcome of my own work, is bonafide, correct to the best of my knowledge and this work has been carried out taking care of Engineering Ethics. The work presented does not infringe any patented work and has not been submitted to any University for the award of any degree or any professional diploma.
+                            </p>
+                        </div> <!-- footer link -->
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="footer-link">
+                            <h6 class="footer-title">I Am Grateful To:</h6>
+                                
+                                <i class="fa fa-arrow-circle-right" aria-hidden="true"> Principal Prof. Deepa Bakhshi</i>
+                                <i class="fa fa-arrow-circle-right" aria-hidden="true"> HOD Prof. Arvind Singh</i><br>
+                                <i class="fa fa-arrow-circle-right" aria-hidden="true"> Prof. Shyamsunder Patidar</i><br>
+                                
+                              
+                               
+                     
+                        </div> <!-- footer link -->
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="footer-link">
+                            <h6 class="footer-title">Submitted By:</h6>
+                                 <i class="fa fa-arrow-circle-right" aria-hidden="true"> Akash Vishwakarma</i><br>
+                                <i class="fa fa-arrow-circle-right" aria-hidden="true"> 09CA183MC002</i><br>
+                                <i class="fa fa-arrow-circle-right" aria-hidden="true"> MCA Final Year Jun 2020</i>
+                             
+                            
+                        </div> <!-- footer link -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer widget -->
+        
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <div class="copyright text-center text-lg-left mt-10">
+                            <p class="text">Crafted by <a style="color: #38f9d7" rel="nofollow" href="#">AV</a></p>
+                        </div> <!--  copyright -->
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="footer-logo text-center mt-10">
+                            <a href="index.html">
+                                <img src="{{ url_for('static', filename='image/av1.png') }}" height=80 width=100>
+                            </a>
+                        </div> <!-- footer logo -->
+                    </div>
+                    <div class="col-lg-5" align="right" id="social">
+                       
+                            <a href="https://www.facebook.com/akashjivishwakarma" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="https://www.instagram.com/theaky786/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/in/av333/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="https://github.com/theav007" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            <a href="theaky786@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                        
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer copyright -->
+    </footer>
+</div>
+
+<script type="text/javascript">
+    //Scroll-up
+  jQuery(document).ready(function($){
+    $(window).scroll(function(){
+        if ($(this).scrollTop() < 200) {
+            $('#topcontrol') .fadeOut();
+        } else {
+            $('#topcontrol') .fadeIn();
+        }
+    });
+    $('#topcontrol').on('click', function(){
+        $('html, body').animate({scrollTop:0}, 'slow');
+        return false;
+        });
+});
+
+jQuery(document).ready(function () {
+    jQuery(window).scroll(function () {
+        if (jQuery(this).scrollTop() > 120) {
+            jQuery('.header-area').addClass("fixed animated fadeInDown");
+
+        } else {
+            jQuery('.header-area').removeClass("fixed animated fadeInDown");
+        }
+
+    });
+
+});
+
+</script>
+
+
+</div>
+<div id="divloader" align="center" class="center">
+  <div class="ring" id="loader"></div>
+  <span>Loading...</span>
+</div>
+
+
+
+</body>
+</html>

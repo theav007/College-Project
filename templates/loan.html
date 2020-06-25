@@ -1,0 +1,363 @@
+    <!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Loan Eligibility Prediction</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+<script src="{{url_for('static', filename='css/nav.js')}}"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body align="center" onload="myFunction()" style="margin:0;" id="page" >
+
+<div class="container-fluid index-page" id="myDiv">
+        <section class="header-area" id="myHeader">
+                <div class="navbar-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <nav class="navbar navbar-expand-lg">
+
+
+
+                                    <div class="col-md-4" align="left" id="logo">
+                                    <a class="navbar-brand" href="/" target="_blank">
+                                            <img src="{{ url_for('static', filename='image/av.svg') }}" height=50 width=50>
+                                    </a>
+                                    </div>
+        
+                                    <div class="col-md-8" id="right">
+                                        <ul class="navbar-nav ml-auto">
+                                              <li class="nav-item">
+                                                 <a href="https://github.com/theav007" target="_blank"> Github </a>
+                                            </li>
+                                            <li class="nav-item active">
+                                                <a href="https://www.linkedin.com/in/av333/" target="_blank"> Linkedin </a>
+                                             </li>
+                                          
+                                            <li class="nav-item">
+                                                <a href="https://mail.google.com/mail/" target="_blank"> Akash Vishwakarma </a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+
+                                </nav> <!-- navbar -->
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                </div> <!-- navbar area -->
+                </section>
+<div id="topcontrol" ></div>
+        <!-- Banner -->
+            <section id="banner">
+
+                <img src="{{ url_for('static', filename='image/loan2.jpg') }}" class="img">
+            </section>
+
+    <section id="body1">        
+    <div class="container">  
+
+        <div class="row" id="home1">
+            <div class="col-md-12">
+                <h1>Problem Statement</h1>
+                <p>There is a company named <b>Best Wishes Finance</b> that deals in all loans. They have presence across all <i>urban, semi urban and rural</i> areas. Customer first apply for the loan after that company validates the customer eligibility for loan. However doing this manually takes a lot of time. Hence it wants to automate the loan eligibility process (real time) based on customer information.</p>
+
+                <h1> Identify the factors that are eligible for taking loan.</h1>
+                <p>There are 13 columns in our data set. Of them <b>Loan_Status</b> is the response variable and rest all are the variables /factors that decide the approval of the loan or not.
+                <br>    
+                <b>Loan ID :</b> Person should have a unique loan ID.<br>
+                <b>Gender :</b> Male or Female.<br>
+                <b>Married :</b> Applicant who is married is represented by Y and not married is represented as N.<br>
+                <b>Dependents :</b> Number of people dependent on the applicant who has taken loan has been provided.<br>
+                <b>Education :</b> Non -graduate or Graduate.<br>
+                <b>Self_Employed :</b> Applicant who is self employed is represented by Y and the one who is not is represented by N.<br>
+                <b>Applicant Income :</b> Applicant Income.<br>
+                <b>Co Applicant income :</b> Co Applicant Income<br>
+                <b>Loan Amount :</b> This amount represents the loan amount in thousands.<br>
+                <b>Loan_Amount_Term :</b> This represents the number of months required to repay the loan.<br>
+                <b>Credit_History :</b> It suggests 1 denotes that the credit history is good and 0 otherwise.<br>
+                <b>Property_Area :</b> Here it can be three types. Urban or Semi Urban or Rural<br>
+                <b>Loan_Status :</b> If the applicant is eligible for loan it’s yes represented by Y else it’s no represented by N.</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="body2">
+<div class="container">           
+    <div class="row" id="home">
+
+    <div class="col-md-3">
+        <div class="col-sm-12" id="algo">
+        <div class="blue"></div>
+        <div >
+            <br><h4>Classification Algorithm</h4><br>
+            <h6> The Characteristics</h6>
+             <span>Classification algorithm used to assign observations to a discrete set of classes.</span>
+        </div><br><br><br>
+        </div>
+    <div class="col-sm-12" id="detail">
+        <div>
+            <br><h4>Logistic Regression</h4>
+        </div>
+        <div><br><h6>Accuracy:</h6><p>81%</p></div>
+        <div><br><h6>Total Entries:</h6><p>614</p></div>
+        <div><br><h6>Target Variable:</h6><p>Loan_Status</p></div>
+        <div><br><h6>Predictor Variables:</h6><p>Remaining Columns</p></div><br><br><br><br><br>
+    </div>
+    </div>
+    <div class="col-md-6" id="new">
+        <div class="blue">
+        <h4 align="center">Independent Bank</h4>
+        </div>
+
+
+    <form action="{{ url_for('loan')}}" method="post">
+       
+    <table align="left">
+    
+    <tr>
+    <td>Gender:</td>
+    <td><select name="sex">
+    <option value=2 >Male</option>
+    <option value=1 >Female</option>
+    </select></td></tr>
+    
+    <tr>
+    <td>Married:</td>
+    <td><select name="married">
+    <option value=2>Yes</option>
+    <option value=1>No</option>
+    </select></td></tr>
+    
+    <tr>
+    <td>Education:</td>
+    <td><select name="edu">
+    <option value=0>Graduate</option>
+    <option value=1>Not Graduate</option>
+    </select></td></tr>
+    
+    <tr>
+    <td>Self Employed:</td>
+    <td><select name="emp">
+    <option value=2>Yes</option>
+    <option value=1>No</option>
+    </select></td></tr>    
+
+    <tr>
+    <td>Property Area:</td>
+    <td><select name="pro">
+    <option value=0>Rural</option>
+    <option value=2>Urban</option>
+    <option value=1>Semiurban</option>
+    </select></td></tr>
+
+    <tr><td>Dependents:</td>
+    <td>
+    <input type="text" name="depent" placeholder="Dependents" required="required" />
+    </td></tr>
+
+    <tr><td>Applicant Income:</td>
+    <td>
+    <input type="text" name="income" placeholder="Income" required="required" />
+    </td></tr>    
+
+    <tr><td>Co-Applicant Income:</td>
+    <td>
+    <input type="text" name="coincome" placeholder="Co Applicant Income"
+     required="required" />
+    </td></tr>
+    
+    <tr><td>Loan Amount:</td>
+    <td>
+    <input type="text" name="loan" placeholder="Loan Amount " required="required" />
+    </td></tr>
+    
+    <tr><td>Loan Amount Terms:</td>
+    <td>
+    <input type="text" name="loanterm" placeholder="Loan Amount Terms" 
+    required="required" />
+    </td></tr>
+    
+    <tr><td>Credit History:</td>
+    <td>
+    <input type="text" name="history" placeholder="Credit History" 
+    required="required" />
+    </td></tr>            
+
+    <tr>
+    <td colspan="2"><button type="submit" class="btn btn-primary btn-block btn-large">
+    Predict</button>
+    </td></tr>      
+    </table>
+    <br><h2>{{ prediction_text }}</h2>
+    </form>
+    </div>
+    <div class="col-md-3">
+        <div class="col-sm-12" id="algo">
+        <div class="blue"></div>
+        <div >
+            <h4>Download Classifier</h4>
+            <h6> GitHub Repository </h6>
+            <a href="https://github.com/theav007/ML-Projects/blob/master/Loan%20Prediction%20With%20Multiple%20Algo's.ipynb" target="_blank"><button>Get</button></a>
+            <br><br><br>
+            <h4>Download Dataset</h4>
+            <h6> GitHub Repository </h6>
+            <a href="https://github.com/theav007/ML-Projects/blob/master/loantrain.csv" target="_blank"><button>Get</button></a>
+            
+        </div><br>
+        </div>
+    <div class="col-sm-12" id="detail">
+        <div>
+            <br><h4>Visit Other Projects</h4><br>
+            <div class="row" id="blog">
+                <div class="col-sm-4">
+                    <img src="{{ url_for('static', filename='image/text.png') }}" id='blog-img'>
+                </div>
+                <div class="col-sm-8">
+                    <h5>Text Classification</h5>
+                    <a href="text" target="_blank"><button>Visits</button></a>
+                </div>
+            </div><br><br><br>
+            <div class="row" id="blog">
+                <div class="col-sm-4">
+                    <img src="{{ url_for('static', filename='image/hr.jpg') }}" id='blog-img'>
+                </div>
+                <div class="col-sm-8">
+                    <h5>HR Analysis</h5>
+                    <a href="hr" target="_blank"><button>Visits</button></a>
+                </div>
+            </div><br><br><br>
+            <div class="row" id="blog">
+                <div class="col-sm-4">
+                    <img src="{{ url_for('static', filename='image/tesseract.png') }}" id='blog-img'>
+                </div>
+                <div class="col-sm-8">
+                    <h5>Text Extraction</h5>
+                    <a href="tesseract" target="_blank"><button>Visits</button></a>
+                </div>
+            </div><br><br><br><br><br><br>
+
+        </div></div>
+    </div>
+
+
+    </div>
+</div>
+    </section>
+<footer id="footer" class="footer-area" style="background-image: url('{{ url_for('static', filename='image/footer.png') }}');">
+        
+        <div class="footer-widget">
+            <div class="container" id="footer1">
+                <div class="row" id="foo1">
+                    <div class="col-sm-6">
+                        <div class="footer-link">
+                            <h6 class="footer-title">A Major Project</h6>
+                            <p>I <b>Akash Vishwakarma</b>, student of <b>Master of Computer Application, Bhabha Engineering Research Institute, Bhopal (M.P.)</b> hereby declare that the work presented in this Major Project is outcome of my own work, is bonafide, correct to the best of my knowledge and this work has been carried out taking care of Engineering Ethics. The work presented does not infringe any patented work and has not been submitted to any University for the award of any degree or any professional diploma.
+                            </p>
+                        </div> <!-- footer link -->
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="footer-link">
+                            <h6 class="footer-title">I Am Grateful To:</h6>
+                            
+                                <i class="fa fa-arrow-circle-right" aria-hidden="true"> Principal Prof. Deepa Bakhshi</i>
+                                <i class="fa fa-arrow-circle-right" aria-hidden="true"> HOD Prof. Arvind Singh</i><br>
+                                <i class="fa fa-arrow-circle-right" aria-hidden="true"> Prof. Shyamsunder Patidar</i><br>
+                                
+                              
+                               
+                     
+                        </div> <!-- footer link -->
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="footer-link">
+                            <h6 class="footer-title">Submitted By:</h6>
+                                 <i class="fa fa-arrow-circle-right" aria-hidden="true"> Akash Vishwakarma</i><br>
+                                <i class="fa fa-arrow-circle-right" aria-hidden="true"> 09CA183MC002</i><br>
+                                <i class="fa fa-arrow-circle-right" aria-hidden="true"> MCA Final Year Jun 2020</i>
+                             
+                            
+                        </div> <!-- footer link -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer widget -->
+        
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <div class="copyright text-center text-lg-left mt-10">
+                            <p class="text">Crafted by <a style="color: #38f9d7" rel="nofollow" href="#">AV</a></p>
+                        </div> <!--  copyright -->
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="footer-logo text-center mt-10">
+                            <a href="index.html">
+                                <img src="{{ url_for('static', filename='image/av1.png') }}" height=80 width=100>
+                            </a>
+                        </div> <!-- footer logo -->
+                    </div>
+                    <div class="col-lg-5" align="right" id="social">
+                       
+                            <a href="https://www.facebook.com/akashjivishwakarma" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="https://www.instagram.com/theaky786/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/in/av333/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="https://github.com/theav007" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            <a href="theaky786@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                        
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer copyright -->
+    </footer>
+    <script type="text/javascript">
+    //Scroll-up
+  jQuery(document).ready(function($){
+    $(window).scroll(function(){
+        if ($(this).scrollTop() < 200) {
+            $('#topcontrol') .fadeOut();
+        } else {
+            $('#topcontrol') .fadeIn();
+        }
+    });
+    $('#topcontrol').on('click', function(){
+        $('html, body').animate({scrollTop:0}, 'slow');
+        return false;
+        });
+});
+
+jQuery(document).ready(function () {
+    jQuery(window).scroll(function () {
+        if (jQuery(this).scrollTop() > 120) {
+            jQuery('.header-area').addClass("fixed animated fadeInDown");
+
+        } else {
+            jQuery('.header-area').removeClass("fixed animated fadeInDown");
+        }
+
+    });
+
+});
+
+</script>
+</div>
+<div id="divloader" align="center" class="center">
+  <div class="ring" id="loader"></div>
+  <span>Loading...</span>
+</div>
+
+
+
+</body>
+</html>
