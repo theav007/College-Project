@@ -19,8 +19,8 @@ app = Flask(__name__)
 mail=Mail(app)
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'avinfocorp@gmail.com'
-app.config['MAIL_PASSWORD'] = 'Akashdduc786'
+app.config['MAIL_USERNAME'] = '********@gmail.com'
+app.config['MAIL_PASSWORD'] = '***********'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
@@ -172,7 +172,7 @@ def sent_mail():
    feedback = request.form["f"]
    star = request.form["r"]
    msg = Message(subject, sender =email, 
-                 recipients = ['avinfocorp@gmail.com'])
+                 recipients = ['*********@gmail.com'])
    msg.body = "Hello AV,\n"+feedback+"\nRating "+star+"\nFrom\n"+nam+"\nEmailId: "+email
    #mail.send(msg)
    if nam and email and subject and feedback and star:
